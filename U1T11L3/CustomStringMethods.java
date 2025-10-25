@@ -142,7 +142,7 @@ public class CustomStringMethods {
       return myString.toLowerCase();
     }
   }
-  public String starBetween(String str) {
+  /*public String starBetween(String str) {
     if (str.length() <= 1) {
       return str;
     }
@@ -152,5 +152,17 @@ public class CustomStringMethods {
     }
     result.append(str.charAt(str.length() - 1));
     return result.toString();
-  }
+  } */
+ public String starBetween(String str) {
+  int origLength = str.length() + str.length() - 3;
+    if (str.length() < 1) {
+      return str;
+    } else {
+      for (int i = 0; i <= origLength; i += 2) {
+        String temp = str.substring(0, i);
+        str = temp + str.substring(i, i + 1) + "*" + str.substring(i + 1);
+      }
+      return str;
+    }
+ }
 }
