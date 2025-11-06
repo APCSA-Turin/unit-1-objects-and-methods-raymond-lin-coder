@@ -1,6 +1,6 @@
 public class CircularProblem {
 public static void main(String[] args) {
-    int n = 2025;
+    int n = 99999999;
     int ans = 0;
     int i = 0;
     int series = 0;
@@ -12,12 +12,7 @@ public static void main(String[] args) {
         i++;
     }
     int pos = n - series;
-    if (pos == 0) {
-        ans = 1;
-    }
-    else {
-        ans = 1 + ((pos - 1) * 2);
-    }
+    ans = 1 + ((pos - 1) * 2);
     System.out.println(ans);
 }
 }
